@@ -30,12 +30,12 @@ rm -r router-scan-frontend
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
-cd /router-scan-backend
+cd router-scan-backend
 pip install -r requirements.txt
 
 cd
 
-cd /router-scan-frontend
+cd router-scan-frontend
 npm install
 
 cd
