@@ -33,6 +33,8 @@ git clone https://github.com/JorgeAVargasC/router-scan-frontend
 cd /router-scan-backend
 pip install -r requirements.txt
 
+cd
+
 cd /router-scan-frontend
 npm install
 
