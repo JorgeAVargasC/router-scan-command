@@ -22,6 +22,9 @@ git clone https://github.com/vulnersCom/nmap-vulners.git
 
 cd /
 
+rm -r router-scan-backend
+rm -r router-scan-frontend
+
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
