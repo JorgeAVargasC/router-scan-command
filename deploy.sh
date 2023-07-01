@@ -18,6 +18,8 @@ apk add --no-cache tmux
 
 mkdir -p /usr/share/nmap/scripts
 cd /usr/share/nmap/scripts
+
+rm -r nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
 
 cd /
@@ -33,6 +35,7 @@ pip install -r requirements.txt
 
 cd /router-scan-frontend
 npm install
+npm run build
 
 cd /
 
@@ -41,5 +44,5 @@ tmux kill-session -t "session"
 tmux new-session -d -s "session"
 tmux send-keys -t "session" "cd router-scan-backend && gunicorn app:app --bind 0.0.0.0:5000 --timeout 1000" Enter
 tmux split-window -h -t "session"
-tmux send-keys -t "session" "cd router-scan-frontend && npm run dev" Enter
+tmux send-keys -t "session" "cd router-scan-frontend && npm run preview" Enter
 tmux attach -t "session"
