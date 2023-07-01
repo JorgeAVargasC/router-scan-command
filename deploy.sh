@@ -22,7 +22,7 @@ cd /usr/share/nmap/scripts
 rm -r nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
 
-cd /
+cd
 
 rm -r router-scan-backend
 rm -r router-scan-frontend
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 cd /router-scan-frontend
 npm install
 
-cd /
+cd
 
 tmux kill-ses -t "session"
 tmux kill-session -t "session"
