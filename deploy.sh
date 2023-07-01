@@ -34,7 +34,8 @@ npm install
 
 cd /
 
-# run backend and frontend with tmux command
-tmux new-session -d -s "router-scan" "cd router-scan-backend && python3 app.py"
-tmux split-window -v -t "router-scan" "cd router-scan-frontend && npm start"
+tmux new-session -d -s "router-scan"
+tmux send-keys -t "router-scan" "cd router-scan-backend && python3 app.py" Enter
+tmux new-window -t "router-scan"
+tmux send-keys -t "router-scan" "cd router-scan-frontend && npm start" Enter
 tmux attach -t "router-scan"
