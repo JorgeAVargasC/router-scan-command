@@ -36,6 +36,8 @@ npm install
 
 cd /
 
+tmux kill-ses -t "session"
+tmux kill-session -t "session"
 tmux new-session -d -s "session"
 tmux send-keys -t "session" "cd router-scan-backend && python3 app.py" Enter
 tmux split-window -v -t "session" "cd router-scan-frontend && npm run dev" Enter
