@@ -40,6 +40,6 @@ tmux kill-ses -t "session"
 tmux kill-session -t "session"
 tmux new-session -d -s "session"
 tmux send-keys -t "session" "cd router-scan-backend && python3 app.py" Enter
-tmux new-window -t "session"
-tmux send-keys -t "session" "cd router-scan-frontend && npm run dev" Enter
+tmux split-window -h -t "session" "cd router-scan-frontend && npm run dev" Enter
+tmux select-layout -t "session" tiled
 tmux attach -t "session"
