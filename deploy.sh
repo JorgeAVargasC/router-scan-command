@@ -28,17 +28,14 @@ rm -r router-scan-frontend
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
-cd router-scan-backend
+cd /router-scan-backend
 pip install -r requirements.txt
 
-cd /
-cd router-scan-frontend
+cd /router-scan-frontend
 npm install
 
-cd /
-
-tmux new-session -d -s "router-scan"
-tmux send-keys -t "router-scan" "cd router-scan-backend && python3 app.py" Enter
-tmux new-window -t "router-scan"
-tmux send-keys -t "router-scan" "cd router-scan-frontend && npm run dev" Enter
-tmux attach -t "router-scan"
+tmux new-session -d -s "session"
+tmux send-keys -t "session" "cd /router-scan-backend && python3 app.py" Enter
+tmux new-window -t "session"
+tmux send-keys -t "session" "cd /router-scan-frontend && npm run dev" Enter
+tmux attach -t "session"
