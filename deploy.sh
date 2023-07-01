@@ -1,24 +1,40 @@
 #!/bin/bash
 
-apk update && apk add --no-cache gcc musl-dev && apk add libxml2-dev libxslt-dev
-
-apk add --no-cache build-base linux-headers
-
+apk update
+apk upgrade
+apk add --no-cache gcc
+apk add --co-cache libxml2-dev
+apk add --no-cache libxslt-dev
+apk add --no-cache musl-dev
+apk add --no-cache build-base
+apk add --no-cache linux-headers
 apk add --no-cache git
-
 apk add --no-cache nmap
-
 apk add --no-cache nmap-scripts
-
 apk add --no-cache python3-dev
-
+apk add --no-cache py3-pip
 apk add --no-cache nodejs npm
+apk add --no-cache tmux
 
-mkdir -p /usr/share/nmap/scripts \
-  && cd /usr/share/nmap/scripts \
-  && git clone https://github.com/vulnersCom/nmap-vulners.git
+mkdir -p /usr/share/nmap/scripts
+cd /usr/share/nmap/scripts
+git clone https://github.com/vulnersCom/nmap-vulners.git
 
 cd /
 
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
+
+cd router-scan-backend
+pip install -r requirements.txt
+
+cd /
+cd router-scan-frontend
+npm install
+
+cd /
+
+# run backend and frontend with tmux command
+tmux new-session -d -s "router-scan" "cd router-scan-backend && python3 app.py"
+tmux split-window -v -t "router-scan" "cd router-scan-frontend && npm start"
+tmux attach -t "router-scan"
