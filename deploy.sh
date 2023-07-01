@@ -35,7 +35,7 @@ cd /router-scan-frontend
 npm install
 
 tmux new-session -d -s "session"
-tmux send-keys -t "session" "cd /router-scan-backend && python3 app.py" Enter
+tmux send-keys -t "session" "cd router-scan-backend && python3 app.py" Enter
 tmux new-window -t "session"
-tmux send-keys -t "session" "cd /router-scan-frontend && npm run dev" Enter
+tmux send-keys -t "session" "cd router-scan-frontend && npm run dev" Enter
 tmux attach -t "session"
