@@ -43,7 +43,7 @@ cd
 tmux kill-ses -t "session"
 tmux kill-session -t "session"
 tmux new-session -d -s "session"
-tmux send-keys -t "session" "cd router-scan-backend && gunicorn app:app --bind 0.0.0.0:5000 --timeout 1000" Enter
+tmux send-keys -t "session" "cd router-scan-backend && gunicorn app:app --bind 0.0.0.0:3000 --timeout 1000" Enter
 tmux split-window -h -t "session"
 tmux send-keys -t "session" "cd router-scan-frontend && npm run dev" Enter
 tmux attach -t "session"
