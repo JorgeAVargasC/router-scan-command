@@ -1,30 +1,30 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade
-sudo apt install -y nmap
-sudo apt install -y nmap-scripts
-sudo apt install -y python3-dev
-sudo apt install -y python3-pip
-sudo apt install -y nodejs
-sudo apt install -y npm
-sudo apt install -y tmux
+apt update
+apt upgrade
+apt install -y nmap
+apt install -y nmap-scripts
+apt install -y python3-dev
+apt install -y python3-pip
+apt install -y nodejs
+apt install -y npm
+apt install -y tmux
 
 cd /usr/share/nmap/scripts
 
-sudo rm -r nmap-vulners
-sudo git clone https://github.com/vulnersCom/nmap-vulners.git
+rm -r nmap-vulners
+git clone https://github.com/vulnersCom/nmap-vulners.git
 
 cd
 
-sudo rm -r router-scan-backend
-sudo rm -r router-scan-frontend
+rm -r router-scan-backend
+rm -r router-scan-frontend
 
-sudo git clone https://github.com/JorgeAVargasC/router-scan-backend
-sudo git clone https://github.com/JorgeAVargasC/router-scan-frontend
+git clone https://github.com/JorgeAVargasC/router-scan-backend
+git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
 cd router-scan-backend
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 
 cd
 
