@@ -15,7 +15,7 @@ cd /usr/share/nmap/scripts
 rm -r nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
 
-cd
+cd /home/kali
 
 rm -r router-scan-backend
 rm -r router-scan-frontend
@@ -26,12 +26,12 @@ git clone https://github.com/JorgeAVargasC/router-scan-frontend
 cd router-scan-backend
 pip install -r requirements.txt
 
-cd
+cd /home/kali
 
 cd router-scan-frontend
 npm install
 
-cd
+cd /home/kali
 
 tmux kill-session -t "session"
 tmux new-session -d -s "session"
