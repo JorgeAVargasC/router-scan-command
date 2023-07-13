@@ -1,14 +1,14 @@
 #!/bin/bash
 
-apt update
-apt upgrade
-apt install -y nmap
-apt install -y nmap-scripts
-apt install -y python3-dev
-apt install -y python3-pip
-apt install -y nodejs
-apt install -y npm
-apt install -y tmux
+# apt update
+# apt upgrade
+apt install nmap
+apt install nmap-scripts
+# apt install -y python3-dev
+# apt install -y python3-pip
+apt install nodejs
+apt install npm
+apt install tmux
 
 cd /usr/share/nmap/scripts
 
