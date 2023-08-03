@@ -1,0 +1,11 @@
+[Unit]
+Description=Frontend Service
+After=network.target
+
+[Service]
+ExecStart=/home/kali/router-scan-command/backend.service.sh
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target

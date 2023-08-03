@@ -1,0 +1,17 @@
+[Unit]
+Description=Firefox Service
+After=network.target
+
+[Service]
+Type=simple
+User=kali
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/kali/.Xauthority
+ExecStart=/home/kali/router-scan-command/browser.service.sh
+Restart=on-failure
+TimeoutSec=60
+RuntimeMaxSec=infinity
+AmbientCapabilities=CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_ADMIN
+
+[Install]
+WantedBy=multi-user.target
