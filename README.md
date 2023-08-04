@@ -57,9 +57,9 @@ sh /home/kali/router-scan-command/deploy.kali.sh
 sudo raspi-config
 ```
 
-- - System Options
-- - Boot / Auto Login
-- - Desktop Autologin
+- System Options
+   - Boot / Auto Login
+  - Desktop Autologin
 
 - Reiniciar la Raspberry Pi 3
 
