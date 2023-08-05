@@ -6,7 +6,7 @@ apt install nmap
 apt install nmap-scripts
 apt install nodejs
 apt install npm
-apt install raspi-config
+apt install kalipi-config
 
 cd /usr/share/nmap/scripts
 

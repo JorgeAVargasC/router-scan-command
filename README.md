@@ -19,7 +19,8 @@ Breve descripción del proyecto.
 - [Raspberry PI Imager](https://www.raspberrypi.com/software/)
 - [Kali Linux ARM](https://www.kali.org/get-kali/#kali-arm)
 - [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-- [Memoria micro SD 16GB configurada con Kali Linux ARM Tutorial](https://www.youtube.com/watch?v=6gDRQ1DqHM4)
+- [Memoria micro SD configurada con Kali Linux ARM](https://www.youtube.com/watch?v=6gDRQ1DqHM4) 
+  (Memoria mínima de 16GB)
 
 ## Instalación
 
@@ -32,11 +33,10 @@ Breve descripción del proyecto.
 - Conectar un mouse a la Raspberry Pi 3
 - Iniciar sesión con el usuario `kali` y la contraseña `kali`
 - Abrir una terminal
-- Actualizamos el sistema
+- Actualizar el listado de paquetes disponibles
 
 ```bash
 sudo apt update
-sudo apt upgrade
 ```
 - Clonar el repositorio en la ruta `/home/kali`
 
@@ -45,10 +45,10 @@ cd /home/kali
 git clone https://github.com/JorgeAVargasC/router-scan-command
 ```
 
-- Ejecutamos el script `deploy.kali.sh`, encargado de automatizar la instalación y configuración de varias herramientas y servicios en el sistema
+- Ejecutamr el script `deploy.kali.sh`, encargado de automatizar la instalación y configuración de varias herramientas y servicios en el sistema
 
 ```bash
-sh /home/kali/router-scan-command/deploy.kali.sh
+sudo sh router-scan-command/deploy.kali.sh
 ```
 
 - Remover el inicio de sesión de la Raspberry Pi 3
@@ -56,10 +56,11 @@ sh /home/kali/router-scan-command/deploy.kali.sh
 ```bash
 sudo raspi-config
 ```
-
-- System Options
-   - Boot / Auto Login
+- Pasos
+  - Boot Options
+  - Desktop / CLI
   - Desktop Autologin
+  - Ok and Finish
 
 - Reiniciar la Raspberry Pi 3
 
