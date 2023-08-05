@@ -7,7 +7,7 @@ Type=simple
 User=kali
 Environment=DISPLAY=:0
 Environment=XAUTHORITY=/home/kali/.Xauthority
-ExecStart=/home/kali/router-scan-command/browser.service.sh
+ExecStart=/home/kali/router-scan-command/browser/rs-browser.sh
 Restart=on-failure
 TimeoutSec=60
 RuntimeMaxSec=infinity

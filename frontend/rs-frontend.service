@@ -1,11 +1,12 @@
 [Unit]
-Description=My React App Service
+Description=Router Scan Frontend Service
 After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/home/kali/router-scan-frontend
-ExecStart=/home/kali/router-scan-command/frontend.service.sh
+Type=oneshot
+ExecStart=/home/kali/router-scan-command/frontend/rs-frontend.sh
+RemainAfterExit=true
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
