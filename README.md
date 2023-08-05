@@ -45,10 +45,10 @@ cd /home/kali
 git clone https://github.com/JorgeAVargasC/router-scan-command
 ```
 
-- Ejecutamr el script `deploy.kali.sh`, encargado de automatizar la instalación y configuración de varias herramientas y servicios en el sistema
+- Ejecutar el script `kali.sh`, encargado de automatizar la instalación y configuración de varias herramientas y servicios en el sistema
 
 ```bash
-sudo sh router-scan-command/deploy.kali.sh
+sudo sh router-scan-command/deploy/kali.sh
 ```
 
 - Remover el inicio de sesión de la Raspberry Pi 3
