@@ -8,15 +8,14 @@ apt install npm
 apt install kalipi-config
 
 # Remove and install new scripts
-
-rm -r /usr/share/nmap/scripts/nmap-vulners
+cd /usr/share/nmap/scripts
+rm -r nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
 
 # Remove and install new backend and frontend
-
-rm -r /home/kali/router-scan-backend
-rm -r /home/kali/router-scan-frontend
-
+cd /home/kali
+rm -r router-scan-backend
+rm -r router-scan-frontend
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
