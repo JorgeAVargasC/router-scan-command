@@ -3,6 +3,7 @@ Description=Router Scan Frontend Service
 After=network.target
 
 [Service]
+User=root
 ExecStart=/home/kali/router-scan-command/frontend/rs-frontend.sh
 Type=oneshot
 RemainAfterExit=true

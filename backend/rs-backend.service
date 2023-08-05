@@ -3,6 +3,7 @@ Description=Router Scan Backend Service
 After=network.target
 
 [Service]
+User=root
 ExecStart=/home/kali/router-scan-command/backend/rs-backend.sh
 Type=oneshot
 RemainAfterExit=true
