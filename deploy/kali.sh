@@ -30,36 +30,43 @@ npm install
 # Give permissions to scripts
 
 chmod +x /home/kali/router-scan-command/browser/rs-browser.sh
+chmod +x /home/kali/router-scan-command/text/rs-text.sh
 chmod +x /home/kali/router-scan-command/backend/rs-backend.sh
 chmod +x /home/kali/router-scan-command/frontend/rs-frontend.sh
 
 # Remove old services
 
 systemctl stop rs-browser.service
+systemctl stop rs-text.service
 systemctl stop rs-backend.service
 systemctl stop rs-frontend.service
 
 systemctl disable rs-browser.service
+systemctl disable rs-text.service
 systemctl disable rs-backend.service
 systemctl disable rs-frontend.service
 
 rm /etc/systemd/system/rs-browser.service
+rm /etc/systemd/system/rs-text.service
 rm /etc/systemd/system/rs-backend.service
 rm /etc/systemd/system/rs-frontend.service
 
 # Create new services
 
 sudo cp /home/kali/router-scan-command/browser/rs-browser.service /etc/systemd/system/
+sudo cp /home/kali/router-scan-command/text/rs-text.service /etc/systemd/system/
 sudo cp /home/kali/router-scan-command/backend/rs-backend.service /etc/systemd/system/
 sudo cp /home/kali/router-scan-command/frontend/rs-frontend.service /etc/systemd/system/
 
 chmod 0644 /etc/systemd/system/rs-browser.service
+chmod 0644 /etc/systemd/system/rs-text.service
 chmod 0644 /etc/systemd/system/rs-backend.service
 chmod 0644 /etc/systemd/system/rs-frontend.service
 
 systemctl daemon-reload
 
 systemctl enable rs-browser.service
+systemctl enable rs-text.service
 systemctl enable rs-backend.service
 systemctl enable rs-frontend.service
 
