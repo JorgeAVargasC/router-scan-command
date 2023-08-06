@@ -21,10 +21,12 @@ git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
 # Install new requirements
 
-cd /home/kali/router-scan-backend
+cd /home/kali
+cd router-scan-backend
 pip install -r requirements.txt
 
-cd /home/kali/router-scan-frontend
+cd /home/kali/
+cd router-scan-frontend
 npm install
 
 # Give permissions to scripts
