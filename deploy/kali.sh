@@ -1,7 +1,7 @@
 #!/bin/bash
 
 print_success() {
-  echo "\e[32m$1\e[0m"  # 32 es el código de color para verde, 0 restablece el color a la configuración predeterminada
+  echo -e "\e[32m$1\e[0m"  # 32 es el código de color para verde, 0 restablece el color a la configuración predeterminada
 }
 
 # apt update
