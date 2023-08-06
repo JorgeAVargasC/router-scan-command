@@ -1,12 +1,14 @@
 [Unit]
 Description=Router Scan Text Service
-After=network.target
+After=network.target network-online.target
+Wants=network-online.target
 
 [Service]
 User=root
 ExecStart=/home/kali/router-scan-command/text/rs-text.sh
 Type=oneshot
 RemainAfterExit=true
+Environment="DISPLAY=:0"
 
 [Install]
 WantedBy=default.target
