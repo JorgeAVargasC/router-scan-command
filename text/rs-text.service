@@ -4,7 +4,7 @@ After=network.target network-online.target
 Wants=network-online.target
 
 [Service]
-User=root
+User=kali
 ExecStart=/home/kali/router-scan-command/text/rs-text.sh
 Type=oneshot
 RemainAfterExit=true
