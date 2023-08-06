@@ -1,16 +1,24 @@
 #!/bin/bash
 
+print_success() {
+  echo -e "\e[32m$1\e[0m"  # 32 es el código de color para verde, 0 restablece el color a la configuración predeterminada
+}
+
 # apt update
 apt install nmap
-apt install nmap-scripts
+# apt install nmap-scripts
 apt install nodejs
 apt install npm
 apt install kalipi-config
+
+print_success "[SUCCESS] Installed nmap, nodejs, npm and kalipi-config"
 
 # Remove and install new scripts
 cd /usr/share/nmap/scripts
 rm -r nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
+
+print_success "[SUCCESS] Installed nmap-vulners"
 
 # Remove and install new backend and frontend
 cd /home/kali
@@ -18,6 +26,8 @@ rm -r router-scan-backend
 rm -r router-scan-frontend
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
+
+print_success "[SUCCESS] Installed router-scan-backend and router-scan-frontend"
 
 # Install new requirements
 
@@ -28,6 +38,8 @@ pip install -r requirements.txt
 cd /home/kali/
 cd router-scan-frontend
 npm install
+
+print_success "[SUCCESS] Installed requirements"
 
 # Give permissions to scripts
 
@@ -72,7 +84,7 @@ systemctl enable rs-text.service
 systemctl enable rs-backend.service
 systemctl enable rs-frontend.service
 
-
+print_success "[SUCCESS] enabled services"
 
 
 # tmux kill-session -t "session"
