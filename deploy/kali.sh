@@ -16,15 +16,15 @@ print_success "[SUCCESS] Installed nmap, nodejs, npm and kalipi-config"
 
 # Remove and install new scripts
 cd /usr/share/nmap/scripts
-rm -r nmap-vulners
+rm -rf nmap-vulners
 git clone https://github.com/vulnersCom/nmap-vulners.git
 
 print_success "[SUCCESS] Installed nmap-vulners"
 
 # Remove and install new backend and frontend
 cd /home/kali
-rm -r router-scan-backend
-rm -r router-scan-frontend
+rm -rf router-scan-backend
+rm -rf router-scan-frontend
 git clone https://github.com/JorgeAVargasC/router-scan-backend
 git clone https://github.com/JorgeAVargasC/router-scan-frontend
 
