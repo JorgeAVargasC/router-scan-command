@@ -8,7 +8,7 @@ if [ -z "$ip" ]; then
   exit 1
 fi
 
-url="http://$ip:$puerto"
+url="http://$ip:$port"
 
 output="/home/kali/url.txt"
 
