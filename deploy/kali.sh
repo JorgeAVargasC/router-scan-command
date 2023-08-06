@@ -1,12 +1,13 @@
 #!/bin/bash
 
 print_success() {
-  echo -e "\e[32m$1\e[0m"  # 32 es el código de color para verde, 0 restablece el color a la configuración predeterminada
+  echo "\e[32m$1\e[0m"  # 32 es el código de color para verde, 0 restablece el color a la configuración predeterminada
 }
 
 # apt update
 apt install nmap
 # apt install nmap-scripts
+apt install openssh-server
 apt install nodejs
 apt install npm
 apt install kalipi-config
@@ -85,6 +86,8 @@ systemctl enable rs-backend.service
 systemctl enable rs-frontend.service
 
 print_success "[SUCCESS] enabled services"
+
+print_success "$(hostname -I | awk '{print $1}')"
 
 
 # tmux kill-session -t "session"
