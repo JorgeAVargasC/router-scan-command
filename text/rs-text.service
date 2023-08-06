@@ -6,6 +6,7 @@ Wants=network-online.target
 [Service]
 User=kali
 ExecStart=/home/kali/router-scan-command/text/rs-text.sh
+Restart=on-failure
 Type=oneshot
 RemainAfterExit=true
 Environment="DISPLAY=:0"
