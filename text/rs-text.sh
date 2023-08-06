@@ -13,9 +13,13 @@ url="http://$ip:$port"
 output="/home/kali/url.txt"
 
 cat << EOF > "$output"
-Por favor, copie y pegue la siguiente URL en su navegador web
-de preferencia (Firefox, Google Chrome, Safari), si lo desea puede utilizar
-su dispositivo móvil para acceder a la URL:
+Pasos para realizar el escaneo:
+
+[1] Conecta el escáner a tu red doméstica por medio del cable ethernet.
+[2] Conecta tu dispositivo móvil o computadora a la misma red.
+[3] Abre el navegador web de tu preferencia (Ejemplo: Chrome, Firefox, Safari etc).
+[4] Ingresa la siguiente dirección en la barra de direcciones del navegador:
+
 $url
 EOF
 
