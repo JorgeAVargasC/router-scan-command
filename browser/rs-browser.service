@@ -1,19 +1,15 @@
 [Unit]
-Description=Firefox Service
-After=network.target nss-lookup.target network-online.target
+Description=Router Scan Browser Service
+After=network.target network-online.target
 Wants=network-online.target
 
 [Service]
-Type=simple
 User=kali
-Environment=DISPLAY=:0
-Environment=XAUTHORITY=/home/kali/.Xauthority
-ExecStart=/home/kali/router-scan-command/browser/rs-browser.sh
+ExecStart=/home/kali/router-scan-command/text/rs-text.sh
 Restart=on-failure
-TimeoutSec=60
-RuntimeMaxSec=infinity
-AmbientCapabilities=CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_ADMIN
+Type=oneshot
 RemainAfterExit=true
+Environment="DISPLAY=:0"
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

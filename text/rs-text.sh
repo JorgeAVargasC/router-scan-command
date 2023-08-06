@@ -12,6 +12,11 @@ url="http://$ip:$port"
 
 output="/home/kali/url.txt"
 
-echo "$url" > "$output"
+cat << EOF > "$output"
+Por favor, copie y pegue la siguiente URL en su navegador web
+de preferencia (Firefox, Google Chrome, Safari), si lo desea puede utilizar
+su dispositivo móvil para acceder a la URL:
+$url
+EOF
 
 mousepad "$output"
