@@ -33,6 +33,10 @@ git clone https://github.com/JorgeAVargasC/router-scan-frontend
 cd router-scan-backend
 pip install -r requirements.txt
 
+# copy .env file
+
+cp /root/router-scan-command/backend/.env /root/router-scan-backend/.env
+
 cd
 
 cd router-scan-frontend
