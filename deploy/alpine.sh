@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 # copy .env file
 
-cp /root/router-scan-command/backend/.env /root/router-scan-backend/
+cp /root/router-scan-command/backend/.env /root/router-scan-backend/.env
 
 cdls
 
