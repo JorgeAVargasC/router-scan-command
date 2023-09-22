@@ -35,9 +35,9 @@ pip install -r requirements.txt
 
 # copy .env file
 
-cp /root/router-scan-command/backend/.env /root/router-scan-backend/.env
+cp /root/router-scan-command/backend/.env /root/router-scan-backend/
 
-cd
+cdls
 
 cd router-scan-frontend
 npm install
