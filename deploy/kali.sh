@@ -36,6 +36,10 @@ cd /home/kali
 cd router-scan-backend
 pip install -r requirements.txt
 
+# Copy env file
+cp /home/kali/router-scan-command/backend/.env /home/kali/router-scan-backend/.env
+print_success "[SUCCESS] Copied .env file"
+
 cd /home/kali/
 cd router-scan-frontend
 npm install
